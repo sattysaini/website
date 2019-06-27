@@ -8,5 +8,8 @@ urlpatterns = [
     path('', views.index, name='index'),
 
     #/music/<album_id>
-    path('<int:album_id>/', views.details, name='details')
+    path('<int:album_id>/', views.details, name='details'),
+
+    #/music/<album_id>/favorite/
+    path('<int:album_id>/favorite/', views.favorite, name='favorite')
 ]
