@@ -1,3 +1,22 @@
+<!--- Loads path for your static files --->
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'music/style.css' %}" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+<nav class="navbar navbar-default bg-dark" >
+    <div class="container-fluid">
+
+        <!---  logo --->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="{% url 'music:index' %}">GeEt</a>
+        </div>
+
+    </div>
+</nav>
+
+
+
 {% if all_albums %}
     <ul>
         {% for album in all_albums %}
